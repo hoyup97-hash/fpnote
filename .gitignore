@@ -1,0 +1,7 @@
+# 배포용: 시안 화면 파일만 올린다 (나머지는 이 컴퓨터에만)
+/*
+!/index.html
+!/css/
+!/js/
+!/.nojekyll
+!/.gitignore
