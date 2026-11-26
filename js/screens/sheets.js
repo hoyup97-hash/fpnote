@@ -14,6 +14,6 @@ function sheetAdd() {
 function sheetMenu() {
   const fp = S.user === 'fp';
   return `<div class="ov" data-act="close"><div class="sheet" role="dialog" aria-modal="true" aria-label="내 계정"><div class="grab"></div>
-  <div style="display:flex;align-items:center;gap:12px;padding:6px 0 4px"><span class="av ${fp ? '' : 'g'}">${fp ? '박' : '이'}</span><div><div class="nm">${fp ? '박지윤 FP' : '이정민 SM'}</div><div class="mt">${fp ? 'FP2041 · 강남 경력전환지점' : 'SM0907 · 관리자 권한'}</div></div></div>
+  <div style="display:flex;align-items:center;gap:12px;padding:6px 0 4px"><span class="av ${fp ? '' : 'g'}">${fp ? '김' : '이'}</span><div><div class="nm">${fp ? '김푸니 FP' : '이호엽 SM'}</div><div class="mt">${fp ? 'FP2041 · 강남 경력전환지점' : 'SM0907 · 관리자 권한'}</div></div></div>
   <button class="btn sec2" data-act="logout">${ic('out')}로그아웃</button></div></div>`;
 }

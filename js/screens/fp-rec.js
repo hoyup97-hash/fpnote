@@ -3,7 +3,7 @@ function vRec() {
   const f = S.f, c = customers[f.cid];
   const ready = f.s && f.r && (f.r === 'ok' || f.why);
   const hint = !f.r ? '결과를 선택해주세요' : f.r !== 'ok' && !f.why ? '사유를 선택해주세요' : '';
-  return `${appBar('활동 기록', '11월 24일 화요일 · 박지윤 FP')}<div class="pad">
+  return `${appBar('활동 기록', '11월 24일 화요일 · 김푸니 FP')}<div class="pad">
   <div class="who ${f.open ? 'open' : ''}"><button class="whob" data-act="chooseC" aria-expanded="${!!f.open}"><span class="av">${esc(c.name[0])}</span><span style="flex:1;text-align:left"><span class="nm">${esc(c.name)} 고객</span> <span class="mt">${esc(c.why)}</span><br>${stBadge(c)}</span><span class="chev"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></button>${callBtn(c)}</div>
   ${f.open ? `<div class="drop"><input type="text" id="pq" placeholder="이름으로 찾기" value="${esc(f.q || '')}" aria-label="이름으로 찾기">${pickList(f.q || '')}</div>` : ''}
   ${!f.open ? `

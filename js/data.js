@@ -132,10 +132,10 @@ syncCur();
 const TEAM = [
   {n:'최윤진',t:'8개월 차',r:{act:.70,appt:.30,need:.68,pc:.80,close:.35,ref:.22,cons:.72},sig:''},
   {n:'한민수',t:'3개월 차 · 1기',r:{act:.40,appt:.36,need:.70,pc:.74,close:.28,ref:.10,cons:.32},sig:'2주 연속 기록 없음'},
-  {n:'오정미',t:'26개월 차 · 멘토',r:{act:.74,appt:.46,need:.80,pc:.86,close:.42,ref:.40,cons:.85},sig:''},
-  {n:'정우훈',t:'5개월 차 · 1기',r:{act:.66,appt:.44,need:.74,pc:.52,close:.12,ref:.15,cons:.60},sig:'PC 단계 4주 정체'},
+  {n:'이보니',t:'26개월 차 · 멘토',r:{act:.74,appt:.46,need:.80,pc:.86,close:.42,ref:.40,cons:.85},sig:''},
+  {n:'양가연',t:'5개월 차 · 1기',r:{act:.66,appt:.44,need:.74,pc:.52,close:.12,ref:.15,cons:.60},sig:'PC 단계 4주 정체'},
   {n:'윤서아',t:'11개월 차',r:{act:.45,appt:.39,need:.71,pc:.77,close:.31,ref:.25,cons:.55},sig:'TA 급감'}];
-const requests = [{who:'정우훈',ax:'PD 체결률',when:'목 오후',memo:'PC까지는 가는데 PD가 안 나와요',st:'new'}];
+const requests = [{who:'양가연',ax:'PD 체결률',when:'목 오후',memo:'PC까지는 가는데 PD가 안 나와요',st:'new'}];
 const meetings = [];
 
 const S = {wk:0, user:null, view:'rec', f:null, cust:null, period:3, cf:'all', src:'all', q:'', sheet:null, call:null, toast:'', sent:false, smFp:null, smNote:'', err:'', from:'cust', more:false, del:null};

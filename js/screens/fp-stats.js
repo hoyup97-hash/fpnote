@@ -25,7 +25,7 @@ function vStats() {
   const best = AX5.slice().sort((a, b) => me[b[0]] - me[a[0]])[0];
   const avg = k => Math.round(AX5.reduce((t, x) => t + k[x[0]], 0) / AX5.length), tot = avg(me), btot = avg(br);
   const ghost = [f[0]]; FLOW.forEach((x, i) => ghost.push(ghost[i] * x.br));
-  const mt = meetings.find(m => m.who === '박지윤'), top = f[0];
+  const mt = meetings.find(m => m.who === '김푸니'), top = f[0];
   const per = {1:'최근 1개월', 3:'최근 3개월', 6:'최근 6개월', 12:'최근 1년'}[S.period];
   return `${appBar('내 성과', `${per} · 지점 평균과 비교`)}<div class="pad">
   <div class="seg" role="tablist" aria-label="기간">${[[1,'1개월'],[3,'3개월'],[6,'6개월'],[12,'1년']].map(([p, n]) => `<button role="tab" aria-selected="${S.period === p}" class="${S.period === p ? 'on' : ''}" data-act="per" data-v="${p}">${n}</button>`).join('')}</div>
@@ -44,5 +44,5 @@ function vStats() {
     const c = conv[s], brr = FLOW[s].br, cls = s === wi ? 'lo' : c >= brr * 1.1 ? 'hi' : '';
     return row + `<div class="fl-c ${cls}">${ic('down')}<span><b class="num">${pct(c)}</b> ${FLOW[s].n}</span><em>지점 ${pct(brr)}</em>${s === wi ? '<strong>가장 약한 곳</strong>' : ''}</div>`;
   }).join('')}</div>
-  <div class="meet">${ic('cal')}<div style="flex:1">${mt ? `<b>이정민 SM과 1:1 · ${esc(mt.when)}</b><div class="mt">이야기할 주제: ${esc(mt.ax)}</div>` : `<b>다음 SM 1:1에서 이야기할 것</b><div class="mt">${wk[1]} ${wk[2]}</div>`}</div></div></div>`;
+  <div class="meet">${ic('cal')}<div style="flex:1">${mt ? `<b>이호엽 SM과 1:1 · ${esc(mt.when)}</b><div class="mt">이야기할 주제: ${esc(mt.ax)}</div>` : `<b>다음 SM 1:1에서 이야기할 것</b><div class="mt">${wk[1]} ${wk[2]}</div>`}</div></div></div>`;
 }

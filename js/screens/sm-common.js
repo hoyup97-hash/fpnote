@@ -2,7 +2,7 @@
 const smBar = (title, sub, back) => `<div class="app sm">${back ? `<button class="ib" data-act="${back}" aria-label="뒤로">${ic('back')}</button>` : ''}<h2>${title}${sub ? `<small>${sub}</small>` : ''}</h2>${back ? '' : `<span class="role">관리자</span><button class="ib" data-act="menu" aria-label="내 계정">${ic('user')}</button>`}</div>`;
 const newReq = () => requests.filter(r => r.st === 'new').length;
 const smTabs = () => `<nav class="tabs sm" style="grid-template-columns:repeat(3,1fr)">${[['team','팀 현황','team'],['req','1:1 상담','inbox'],['tana','팀 분석','hex']].map(([k, n, icn]) => `<button data-act="smgo" data-v="${k}" class="${S.smView === k ? 'on' : ''}">${ic(icn)}${n}${k === 'req' && newReq() ? `<span class="cnt">${newReq()}</span>` : ''}</button>`).join('')}</nav>`;
-const members = () => [{n:'박지윤', t:'14개월 차', r:agg(3).raw, low:agg(3).low, rec:agg(1).raw.cons, sig:''}, ...TEAM.map(p => ({...p, low:{}, rec:p.r.cons}))];
+const members = () => [{n:'김푸니', t:'14개월 차', r:agg(3).raw, low:agg(3).low, rec:agg(1).raw.cons, sig:''}, ...TEAM.map(p => ({...p, low:{}, rec:p.r.cons}))];
 
 function radarSvg(mine, br) {
   const cx = 170, cy = 156, R = 104;
